@@ -73,3 +73,6 @@ Plugins/**/Intermediate/*
 
 # Cache files for the editor to use
 DerivedDataCache/*
+
+# Character Base to all - Find in other proyect or download from Fab (Paragon: Wraight)
+Content/ParagonWraith/*
