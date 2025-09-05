@@ -1,0 +1,22 @@
+{
+	"FileVersion": 3,
+	"EngineAssociation": "394E998B-91C1-4EBF-9708-66E99160584F",
+	"Category": "",
+	"Description": "",
+	"Modules": [
+		{
+			"Name": "FTPS_Cplusplus",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "ModelingToolsEditorMode",
+			"Enabled": true,
+			"TargetAllowList": [
+				"Editor"
+			]
+		}
+	]
+}

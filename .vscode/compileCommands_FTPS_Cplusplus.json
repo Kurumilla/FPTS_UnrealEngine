@@ -1,0 +1,26 @@
+[
+	{
+		"file": "/home/kitsuki/Projects/Unreal Projects/FTPS_Cplusplus/Source/FTPS_Cplusplus/FTPS_Cplusplus.Build.cs",
+		"arguments": [
+			"/home/kitsuki/UnrealEngine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/kitsuki/Projects/Unreal Projects/FTPS_Cplusplus/.vscode/compileCommands_FTPS_Cplusplus/FTPS_Cplusplus.1.rsp"
+		],
+		"directory": "/home/kitsuki/UnrealEngine/Engine/Source"
+	},
+	{
+		"file": "/home/kitsuki/Projects/Unreal Projects/FTPS_Cplusplus/Source/FTPS_Cplusplus/FTPS_Cplusplus.cpp",
+		"arguments": [
+			"/home/kitsuki/UnrealEngine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/kitsuki/Projects/Unreal Projects/FTPS_Cplusplus/.vscode/compileCommands_FTPS_Cplusplus/FTPS_Cplusplus.1.rsp"
+		],
+		"directory": "/home/kitsuki/UnrealEngine/Engine/Source"
+	},
+	{
+		"file": "/home/kitsuki/Projects/Unreal Projects/FTPS_Cplusplus/Source/FTPS_Cplusplus/FTPS_Cplusplus.h",
+		"arguments": [
+			"/home/kitsuki/UnrealEngine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/kitsuki/Projects/Unreal Projects/FTPS_Cplusplus/.vscode/compileCommands_FTPS_Cplusplus/FTPS_Cplusplus.1.rsp"
+		],
+		"directory": "/home/kitsuki/UnrealEngine/Engine/Source"
+	}
+]

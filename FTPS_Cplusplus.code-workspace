@@ -1,0 +1,911 @@
+{
+	"folders": [
+		{
+			"name": "FTPS_Cplusplus",
+			"path": "."
+		},
+		{
+			"name": "UE5",
+			"path": "/home/kitsuki/UnrealEngine"
+		}
+	],
+	"settings": {
+		"typescript.tsc.autoDetect": "off",
+		"npm.autoDetect": "off",
+		"terminal.integrated.env.linux": {
+			"PATH": "/home/kitsuki/UnrealEngine/Engine/Binaries/ThirdParty/DotNet/8.0.300/linux-x64:${env:PATH}",
+			"DOTNET_ROOT": "/home/kitsuki/UnrealEngine/Engine/Binaries/ThirdParty/DotNet/8.0.300/linux-x64",
+			"DOTNET_HOST_PATH": "/home/kitsuki/UnrealEngine/Engine/Binaries/ThirdParty/DotNet/8.0.300/linux-x64/dotnet",
+			"DOTNET_MULTILEVEL_LOOKUP": "0",
+			"DOTNET_ROLL_FORWARD": "LatestMajor"
+		}
+	},
+	"extensions": {
+		"recommendations": [
+			"ms-vscode.cpptools",
+			"ms-dotnettools.csharp"
+		]
+	},
+	"tasks": {
+		"version": "2.0.0",
+		"tasks": [
+			{
+				"label": "FTPS_Cplusplus Linux Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"FTPS_Cplusplus",
+					"Linux",
+					"Debug",
+					"/home/kitsuki/Projects/Unreal Projects/FTPS_Cplusplus/FTPS_Cplusplus.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/kitsuki/UnrealEngine"
+				}
+			},
+			{
+				"label": "FTPS_Cplusplus Linux Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"FTPS_Cplusplus",
+					"Linux",
+					"Debug",
+					"/home/kitsuki/Projects/Unreal Projects/FTPS_Cplusplus/FTPS_Cplusplus.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"FTPS_Cplusplus Linux Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/kitsuki/UnrealEngine"
+				}
+			},
+			{
+				"label": "FTPS_Cplusplus Linux Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"FTPS_Cplusplus",
+					"Linux",
+					"Debug",
+					"/home/kitsuki/Projects/Unreal Projects/FTPS_Cplusplus/FTPS_Cplusplus.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/kitsuki/UnrealEngine"
+				}
+			},
+			{
+				"label": "FTPS_Cplusplus Linux DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"FTPS_Cplusplus",
+					"Linux",
+					"DebugGame",
+					"/home/kitsuki/Projects/Unreal Projects/FTPS_Cplusplus/FTPS_Cplusplus.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/kitsuki/UnrealEngine"
+				}
+			},
+			{
+				"label": "FTPS_Cplusplus Linux DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"FTPS_Cplusplus",
+					"Linux",
+					"DebugGame",
+					"/home/kitsuki/Projects/Unreal Projects/FTPS_Cplusplus/FTPS_Cplusplus.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"FTPS_Cplusplus Linux DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/kitsuki/UnrealEngine"
+				}
+			},
+			{
+				"label": "FTPS_Cplusplus Linux DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"FTPS_Cplusplus",
+					"Linux",
+					"DebugGame",
+					"/home/kitsuki/Projects/Unreal Projects/FTPS_Cplusplus/FTPS_Cplusplus.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/kitsuki/UnrealEngine"
+				}
+			},
+			{
+				"label": "FTPS_Cplusplus Linux Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"FTPS_Cplusplus",
+					"Linux",
+					"Development",
+					"/home/kitsuki/Projects/Unreal Projects/FTPS_Cplusplus/FTPS_Cplusplus.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/kitsuki/UnrealEngine"
+				}
+			},
+			{
+				"label": "FTPS_Cplusplus Linux Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"FTPS_Cplusplus",
+					"Linux",
+					"Development",
+					"/home/kitsuki/Projects/Unreal Projects/FTPS_Cplusplus/FTPS_Cplusplus.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"FTPS_Cplusplus Linux Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/kitsuki/UnrealEngine"
+				}
+			},
+			{
+				"label": "FTPS_Cplusplus Linux Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"FTPS_Cplusplus",
+					"Linux",
+					"Development",
+					"/home/kitsuki/Projects/Unreal Projects/FTPS_Cplusplus/FTPS_Cplusplus.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/kitsuki/UnrealEngine"
+				}
+			},
+			{
+				"label": "FTPS_Cplusplus Linux Test Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"FTPS_Cplusplus",
+					"Linux",
+					"Test",
+					"/home/kitsuki/Projects/Unreal Projects/FTPS_Cplusplus/FTPS_Cplusplus.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/kitsuki/UnrealEngine"
+				}
+			},
+			{
+				"label": "FTPS_Cplusplus Linux Test Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"FTPS_Cplusplus",
+					"Linux",
+					"Test",
+					"/home/kitsuki/Projects/Unreal Projects/FTPS_Cplusplus/FTPS_Cplusplus.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"FTPS_Cplusplus Linux Test Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/kitsuki/UnrealEngine"
+				}
+			},
+			{
+				"label": "FTPS_Cplusplus Linux Test Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"FTPS_Cplusplus",
+					"Linux",
+					"Test",
+					"/home/kitsuki/Projects/Unreal Projects/FTPS_Cplusplus/FTPS_Cplusplus.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/kitsuki/UnrealEngine"
+				}
+			},
+			{
+				"label": "FTPS_Cplusplus Linux Shipping Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"FTPS_Cplusplus",
+					"Linux",
+					"Shipping",
+					"/home/kitsuki/Projects/Unreal Projects/FTPS_Cplusplus/FTPS_Cplusplus.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/kitsuki/UnrealEngine"
+				}
+			},
+			{
+				"label": "FTPS_Cplusplus Linux Shipping Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"FTPS_Cplusplus",
+					"Linux",
+					"Shipping",
+					"/home/kitsuki/Projects/Unreal Projects/FTPS_Cplusplus/FTPS_Cplusplus.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"FTPS_Cplusplus Linux Shipping Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/kitsuki/UnrealEngine"
+				}
+			},
+			{
+				"label": "FTPS_Cplusplus Linux Shipping Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"FTPS_Cplusplus",
+					"Linux",
+					"Shipping",
+					"/home/kitsuki/Projects/Unreal Projects/FTPS_Cplusplus/FTPS_Cplusplus.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/kitsuki/UnrealEngine"
+				}
+			},
+			{
+				"label": "FTPS_Cplusplus LinuxArm64 Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"FTPS_Cplusplus",
+					"LinuxArm64",
+					"Debug",
+					"/home/kitsuki/Projects/Unreal Projects/FTPS_Cplusplus/FTPS_Cplusplus.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/kitsuki/UnrealEngine"
+				}
+			},
+			{
+				"label": "FTPS_Cplusplus LinuxArm64 Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"FTPS_Cplusplus",
+					"LinuxArm64",
+					"Debug",
+					"/home/kitsuki/Projects/Unreal Projects/FTPS_Cplusplus/FTPS_Cplusplus.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"FTPS_Cplusplus LinuxArm64 Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/kitsuki/UnrealEngine"
+				}
+			},
+			{
+				"label": "FTPS_Cplusplus LinuxArm64 Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"FTPS_Cplusplus",
+					"LinuxArm64",
+					"Debug",
+					"/home/kitsuki/Projects/Unreal Projects/FTPS_Cplusplus/FTPS_Cplusplus.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/kitsuki/UnrealEngine"
+				}
+			},
+			{
+				"label": "FTPS_Cplusplus LinuxArm64 DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"FTPS_Cplusplus",
+					"LinuxArm64",
+					"DebugGame",
+					"/home/kitsuki/Projects/Unreal Projects/FTPS_Cplusplus/FTPS_Cplusplus.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/kitsuki/UnrealEngine"
+				}
+			},
+			{
+				"label": "FTPS_Cplusplus LinuxArm64 DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"FTPS_Cplusplus",
+					"LinuxArm64",
+					"DebugGame",
+					"/home/kitsuki/Projects/Unreal Projects/FTPS_Cplusplus/FTPS_Cplusplus.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"FTPS_Cplusplus LinuxArm64 DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/kitsuki/UnrealEngine"
+				}
+			},
+			{
+				"label": "FTPS_Cplusplus LinuxArm64 DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"FTPS_Cplusplus",
+					"LinuxArm64",
+					"DebugGame",
+					"/home/kitsuki/Projects/Unreal Projects/FTPS_Cplusplus/FTPS_Cplusplus.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/kitsuki/UnrealEngine"
+				}
+			},
+			{
+				"label": "FTPS_Cplusplus LinuxArm64 Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"FTPS_Cplusplus",
+					"LinuxArm64",
+					"Development",
+					"/home/kitsuki/Projects/Unreal Projects/FTPS_Cplusplus/FTPS_Cplusplus.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/kitsuki/UnrealEngine"
+				}
+			},
+			{
+				"label": "FTPS_Cplusplus LinuxArm64 Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"FTPS_Cplusplus",
+					"LinuxArm64",
+					"Development",
+					"/home/kitsuki/Projects/Unreal Projects/FTPS_Cplusplus/FTPS_Cplusplus.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"FTPS_Cplusplus LinuxArm64 Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/kitsuki/UnrealEngine"
+				}
+			},
+			{
+				"label": "FTPS_Cplusplus LinuxArm64 Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"FTPS_Cplusplus",
+					"LinuxArm64",
+					"Development",
+					"/home/kitsuki/Projects/Unreal Projects/FTPS_Cplusplus/FTPS_Cplusplus.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/kitsuki/UnrealEngine"
+				}
+			},
+			{
+				"label": "FTPS_Cplusplus LinuxArm64 Test Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"FTPS_Cplusplus",
+					"LinuxArm64",
+					"Test",
+					"/home/kitsuki/Projects/Unreal Projects/FTPS_Cplusplus/FTPS_Cplusplus.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/kitsuki/UnrealEngine"
+				}
+			},
+			{
+				"label": "FTPS_Cplusplus LinuxArm64 Test Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"FTPS_Cplusplus",
+					"LinuxArm64",
+					"Test",
+					"/home/kitsuki/Projects/Unreal Projects/FTPS_Cplusplus/FTPS_Cplusplus.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"FTPS_Cplusplus LinuxArm64 Test Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/kitsuki/UnrealEngine"
+				}
+			},
+			{
+				"label": "FTPS_Cplusplus LinuxArm64 Test Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"FTPS_Cplusplus",
+					"LinuxArm64",
+					"Test",
+					"/home/kitsuki/Projects/Unreal Projects/FTPS_Cplusplus/FTPS_Cplusplus.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/kitsuki/UnrealEngine"
+				}
+			},
+			{
+				"label": "FTPS_Cplusplus LinuxArm64 Shipping Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"FTPS_Cplusplus",
+					"LinuxArm64",
+					"Shipping",
+					"/home/kitsuki/Projects/Unreal Projects/FTPS_Cplusplus/FTPS_Cplusplus.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/kitsuki/UnrealEngine"
+				}
+			},
+			{
+				"label": "FTPS_Cplusplus LinuxArm64 Shipping Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"FTPS_Cplusplus",
+					"LinuxArm64",
+					"Shipping",
+					"/home/kitsuki/Projects/Unreal Projects/FTPS_Cplusplus/FTPS_Cplusplus.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"FTPS_Cplusplus LinuxArm64 Shipping Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/kitsuki/UnrealEngine"
+				}
+			},
+			{
+				"label": "FTPS_Cplusplus LinuxArm64 Shipping Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"FTPS_Cplusplus",
+					"LinuxArm64",
+					"Shipping",
+					"/home/kitsuki/Projects/Unreal Projects/FTPS_Cplusplus/FTPS_Cplusplus.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/kitsuki/UnrealEngine"
+				}
+			},
+			{
+				"label": "FTPS_CplusplusEditor Linux Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"FTPS_CplusplusEditor",
+					"Linux",
+					"Debug",
+					"/home/kitsuki/Projects/Unreal Projects/FTPS_Cplusplus/FTPS_Cplusplus.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/kitsuki/UnrealEngine"
+				}
+			},
+			{
+				"label": "FTPS_CplusplusEditor Linux Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"FTPS_CplusplusEditor",
+					"Linux",
+					"Debug",
+					"/home/kitsuki/Projects/Unreal Projects/FTPS_Cplusplus/FTPS_Cplusplus.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"FTPS_CplusplusEditor Linux Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/kitsuki/UnrealEngine"
+				}
+			},
+			{
+				"label": "FTPS_CplusplusEditor Linux Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"FTPS_CplusplusEditor",
+					"Linux",
+					"Debug",
+					"/home/kitsuki/Projects/Unreal Projects/FTPS_Cplusplus/FTPS_Cplusplus.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/kitsuki/UnrealEngine"
+				}
+			},
+			{
+				"label": "FTPS_CplusplusEditor Linux DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"FTPS_CplusplusEditor",
+					"Linux",
+					"DebugGame",
+					"/home/kitsuki/Projects/Unreal Projects/FTPS_Cplusplus/FTPS_Cplusplus.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/kitsuki/UnrealEngine"
+				}
+			},
+			{
+				"label": "FTPS_CplusplusEditor Linux DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"FTPS_CplusplusEditor",
+					"Linux",
+					"DebugGame",
+					"/home/kitsuki/Projects/Unreal Projects/FTPS_Cplusplus/FTPS_Cplusplus.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"FTPS_CplusplusEditor Linux DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/kitsuki/UnrealEngine"
+				}
+			},
+			{
+				"label": "FTPS_CplusplusEditor Linux DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"FTPS_CplusplusEditor",
+					"Linux",
+					"DebugGame",
+					"/home/kitsuki/Projects/Unreal Projects/FTPS_Cplusplus/FTPS_Cplusplus.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/kitsuki/UnrealEngine"
+				}
+			},
+			{
+				"label": "FTPS_CplusplusEditor Linux Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"FTPS_CplusplusEditor",
+					"Linux",
+					"Development",
+					"/home/kitsuki/Projects/Unreal Projects/FTPS_Cplusplus/FTPS_Cplusplus.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/kitsuki/UnrealEngine"
+				}
+			},
+			{
+				"label": "FTPS_CplusplusEditor Linux Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"FTPS_CplusplusEditor",
+					"Linux",
+					"Development",
+					"/home/kitsuki/Projects/Unreal Projects/FTPS_Cplusplus/FTPS_Cplusplus.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"FTPS_CplusplusEditor Linux Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/kitsuki/UnrealEngine"
+				}
+			},
+			{
+				"label": "FTPS_CplusplusEditor Linux Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"FTPS_CplusplusEditor",
+					"Linux",
+					"Development",
+					"/home/kitsuki/Projects/Unreal Projects/FTPS_Cplusplus/FTPS_Cplusplus.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/kitsuki/UnrealEngine"
+				}
+			}
+		]
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"name": "Launch FTPS_Cplusplus (Debug)",
+				"request": "launch",
+				"program": "/home/kitsuki/Projects/Unreal Projects/FTPS_Cplusplus/Binaries/Linux/FTPS_Cplusplus-Linux-Debug",
+				"preLaunchTask": "FTPS_Cplusplus Linux Debug Build",
+				"args": [
+				],
+				"cwd": "/home/kitsuki/UnrealEngine",
+				"type": "cppdbg",
+				"visualizerFile": "/home/kitsuki/UnrealEngine/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true,
+				"sourceFileMap": {
+					"/UEVFS/FTPS_Cplusplus": "/home/kitsuki/Projects/Unreal Projects/FTPS_Cplusplus",
+					"/UEVFS/Root": "/home/kitsuki/UnrealEngine"
+				}
+			},
+			{
+				"name": "Launch FTPS_Cplusplus (DebugGame)",
+				"request": "launch",
+				"program": "/home/kitsuki/Projects/Unreal Projects/FTPS_Cplusplus/Binaries/Linux/FTPS_Cplusplus-Linux-DebugGame",
+				"preLaunchTask": "FTPS_Cplusplus Linux DebugGame Build",
+				"args": [
+				],
+				"cwd": "/home/kitsuki/UnrealEngine",
+				"type": "cppdbg",
+				"visualizerFile": "/home/kitsuki/UnrealEngine/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true,
+				"sourceFileMap": {
+					"/UEVFS/FTPS_Cplusplus": "/home/kitsuki/Projects/Unreal Projects/FTPS_Cplusplus",
+					"/UEVFS/Root": "/home/kitsuki/UnrealEngine"
+				}
+			},
+			{
+				"name": "Launch FTPS_Cplusplus (Development)",
+				"request": "launch",
+				"program": "/home/kitsuki/Projects/Unreal Projects/FTPS_Cplusplus/Binaries/Linux/FTPS_Cplusplus",
+				"preLaunchTask": "FTPS_Cplusplus Linux Development Build",
+				"args": [
+				],
+				"cwd": "/home/kitsuki/UnrealEngine",
+				"type": "cppdbg",
+				"visualizerFile": "/home/kitsuki/UnrealEngine/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true,
+				"sourceFileMap": {
+					"/UEVFS/FTPS_Cplusplus": "/home/kitsuki/Projects/Unreal Projects/FTPS_Cplusplus",
+					"/UEVFS/Root": "/home/kitsuki/UnrealEngine"
+				}
+			},
+			{
+				"name": "Launch FTPS_Cplusplus (Test)",
+				"request": "launch",
+				"program": "/home/kitsuki/Projects/Unreal Projects/FTPS_Cplusplus/Binaries/Linux/FTPS_Cplusplus-Linux-Test",
+				"preLaunchTask": "FTPS_Cplusplus Linux Test Build",
+				"args": [
+				],
+				"cwd": "/home/kitsuki/UnrealEngine",
+				"type": "cppdbg",
+				"visualizerFile": "/home/kitsuki/UnrealEngine/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true,
+				"sourceFileMap": {
+					"/UEVFS/FTPS_Cplusplus": "/home/kitsuki/Projects/Unreal Projects/FTPS_Cplusplus",
+					"/UEVFS/Root": "/home/kitsuki/UnrealEngine"
+				}
+			},
+			{
+				"name": "Launch FTPS_Cplusplus (Shipping)",
+				"request": "launch",
+				"program": "/home/kitsuki/Projects/Unreal Projects/FTPS_Cplusplus/Binaries/Linux/FTPS_Cplusplus-Linux-Shipping",
+				"preLaunchTask": "FTPS_Cplusplus Linux Shipping Build",
+				"args": [
+				],
+				"cwd": "/home/kitsuki/UnrealEngine",
+				"type": "cppdbg",
+				"visualizerFile": "/home/kitsuki/UnrealEngine/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true,
+				"sourceFileMap": {
+					"/UEVFS/FTPS_Cplusplus": "/home/kitsuki/Projects/Unreal Projects/FTPS_Cplusplus",
+					"/UEVFS/Root": "/home/kitsuki/UnrealEngine"
+				}
+			},
+			{
+				"name": "Launch FTPS_CplusplusEditor (Debug)",
+				"request": "launch",
+				"program": "/home/kitsuki/UnrealEngine/Engine/Binaries/Linux/UnrealEditor-Linux-Debug",
+				"preLaunchTask": "FTPS_CplusplusEditor Linux Debug Build",
+				"args": [
+					"/home/kitsuki/Projects/Unreal Projects/FTPS_Cplusplus/FTPS_Cplusplus.uproject"
+				],
+				"cwd": "/home/kitsuki/UnrealEngine",
+				"type": "cppdbg",
+				"visualizerFile": "/home/kitsuki/UnrealEngine/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true,
+				"sourceFileMap": {
+					"/UEVFS/FTPS_Cplusplus": "/home/kitsuki/Projects/Unreal Projects/FTPS_Cplusplus",
+					"/UEVFS/Root": "/home/kitsuki/UnrealEngine"
+				}
+			},
+			{
+				"name": "Launch FTPS_CplusplusEditor (DebugGame)",
+				"request": "launch",
+				"program": "/home/kitsuki/UnrealEngine/Engine/Binaries/Linux/UnrealEditor-Linux-DebugGame",
+				"preLaunchTask": "FTPS_CplusplusEditor Linux DebugGame Build",
+				"args": [
+					"/home/kitsuki/Projects/Unreal Projects/FTPS_Cplusplus/FTPS_Cplusplus.uproject"
+				],
+				"cwd": "/home/kitsuki/UnrealEngine",
+				"type": "cppdbg",
+				"visualizerFile": "/home/kitsuki/UnrealEngine/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true,
+				"sourceFileMap": {
+					"/UEVFS/FTPS_Cplusplus": "/home/kitsuki/Projects/Unreal Projects/FTPS_Cplusplus",
+					"/UEVFS/Root": "/home/kitsuki/UnrealEngine"
+				}
+			},
+			{
+				"name": "Launch FTPS_CplusplusEditor (Development)",
+				"request": "launch",
+				"program": "/home/kitsuki/UnrealEngine/Engine/Binaries/Linux/UnrealEditor",
+				"preLaunchTask": "FTPS_CplusplusEditor Linux Development Build",
+				"args": [
+					"/home/kitsuki/Projects/Unreal Projects/FTPS_Cplusplus/FTPS_Cplusplus.uproject"
+				],
+				"cwd": "/home/kitsuki/UnrealEngine",
+				"type": "cppdbg",
+				"visualizerFile": "/home/kitsuki/UnrealEngine/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true,
+				"sourceFileMap": {
+					"/UEVFS/FTPS_Cplusplus": "/home/kitsuki/Projects/Unreal Projects/FTPS_Cplusplus",
+					"/UEVFS/Root": "/home/kitsuki/UnrealEngine"
+				}
+			},
+			{
+				"name": "Generate Project Files",
+				"type": "coreclr",
+				"request": "launch",
+				"preLaunchTask": "UnrealBuildTool Linux Development Build",
+				"program": "/home/kitsuki/UnrealEngine/Engine/Build/BatchFiles/RunUBT.bat",
+				"args": [
+					"-projectfiles",
+					"-vscode",
+					"-project=/home/kitsuki/Projects/Unreal Projects/FTPS_Cplusplus/FTPS_Cplusplus.uproject",
+					"-game",
+					"-engine",
+					"-dotnet"
+				],
+				"env": {
+					"PATH": "/home/kitsuki/UnrealEngine/Engine/Binaries/ThirdParty/DotNet/8.0.300/linux-x64:${env:PATH}",
+					"DOTNET_ROOT": "/home/kitsuki/UnrealEngine/Engine/Binaries/ThirdParty/DotNet/8.0.300/linux-x64",
+					"DOTNET_HOST_PATH": "/home/kitsuki/UnrealEngine/Engine/Binaries/ThirdParty/DotNet/8.0.300/linux-x64/dotnet",
+					"DOTNET_MULTILEVEL_LOOKUP": "0",
+					"DOTNET_ROLL_FORWARD": "LatestMajor"
+				},
+				"console": "internalConsole",
+				"internalConsoleOptions": "openOnSessionStart",
+				"stopAtEntry": false,
+				"cwd": "/home/kitsuki/UnrealEngine"
+			}
+		]
+	}
+}
